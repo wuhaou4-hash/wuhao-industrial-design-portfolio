@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>body{margin:0;background:#000}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Wu Hao 吴昊 — Industrial Design Portfolio</title>
+<meta name="description" content="Wu Hao (吴昊), industrial designer. Selected work across lighting, furniture, wearable assistive devices and power products.">
+<meta property="og:title" content="Wu Hao 吴昊 — Industrial Design Portfolio">
+<meta property="og:description" content="Selected industrial design projects by Wu Hao (吴昊).">
+<meta property="og:type" content="website">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap">
+<style>
+/* Layout: black stage like a product-launch page. Small grey text top-left, big lit renders centred, images edge to edge in tight rows. Single dark look by choice. */
+:root{
+  color-scheme:dark;
+  --bg:#000000; --ink:#F2EFEA; --text:#8E8B86; --dim:#5A5753; --line:#232120; --accent:#F2793A; --glow:#FFB070;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:1rem;line-height:2;font-weight:400;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{display:block;max-width:100%}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;color:var(--ink);font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section[id]{scroll-margin-top:64px}
+
+.wrap{width:100%;max-width:1500px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+@media (min-width:900px){.wrap{padding-left:max(7vw,env(safe-area-inset-left,0px));padding-right:max(7vw,env(safe-area-inset-right,0px))}}
+.label{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:500}
+.label b{color:var(--accent);font-weight:500}
+
+/* Bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(0,0,0,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:8px 24px;min-height:56px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.1rem;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.bar ul{display:flex;gap:2px 26px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.bar li a{text-decoration:none;font-size:.88rem;color:var(--text);padding:8px 0;display:inline-block}
+.bar li a:hover{color:var(--ink)}
+
+/* Intro */
+.intro{padding-block:clamp(40px,7vw,110px) clamp(40px,7vw,100px)}
+.intro-grid{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(28px,6vw,88px);align-items:center}
+.intro .hello{font-size:clamp(1.1rem,2.4vw,1.7rem);font-weight:600;color:#3a3836;margin:0}
+.intro h1{font-size:clamp(3rem,9vw,8.5rem);line-height:.95;font-weight:700;margin:14px 0 clamp(22px,3vw,36px)}
+.intro h1 span{color:var(--accent)}
+.intro .bio{max-width:44em;font-size:1.02rem}
+.intro .bio + .bio{margin-top:8px;font-size:.95rem;color:var(--dim)}
+.cta{display:flex;flex-wrap:wrap;gap:20px 32px;margin-top:clamp(22px,3vw,36px)}
+.cta a{color:var(--ink);text-decoration:none;font-size:.95rem;border-bottom:1px solid var(--accent);padding-bottom:3px}
+.cta a:hover{color:var(--glow)}
+.me{margin:0}
+.me img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:2px;filter:grayscale(.2) contrast(1.02)}
+.me figcaption{font-size:.85rem;margin-top:10px;line-height:1.5}
+.me figcaption b{color:var(--ink);font-weight:600}
+@media (max-width:760px){.intro-grid{grid-template-columns:minmax(0,1fr)} .me{max-width:190px}}
+
+/* Work index */
+.idx{padding-block:0 clamp(48px,8vw,120px)}
+.idx-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2vw,28px);margin-top:18px}
+.card{display:block;text-decoration:none;color:inherit}
+.card .pic{aspect-ratio:4/5;overflow:hidden;background:#0b0a09}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.03)}
+.card .meta{display:flex;gap:16px;align-items:baseline;padding-top:14px;line-height:1.4}
+.card .n{font-size:.78rem;letter-spacing:.14em;color:var(--accent)}
+.card h3{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.05}
+.card p{margin-top:4px;font-size:.95rem}
+@media (max-width:640px){.idx-grid{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.card img{transition:none}.card:hover img{transform:none}}
+.stripe{margin-top:clamp(56px,9vw,140px)}
+.collages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(3px,.5vw,6px)}
+.collages .ph{aspect-ratio:911/1620}
+.swatch{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.45em;vertical-align:baseline}
+
+/* Project opening */
+.open{padding-block:clamp(48px,8vw,120px) 0;border-top:1px solid var(--line)}
+.open h2{font-size:clamp(3.6rem,15vw,14rem);line-height:.82;font-weight:700;letter-spacing:-.05em;margin:12px 0 clamp(28px,4vw,56px)}
+.copy{max-width:56em;line-height:2.1}
+.copy p + p{margin-top:.5em}
+.copy .zh{color:var(--dim)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;margin:clamp(32px,5vw,64px) 0 0}
+.facts div{border-top:1px solid var(--line);padding:14px 0 6px}
+.facts dt{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:2px}
+.facts dd{margin:0;color:var(--ink);font-size:.95rem;line-height:1.5}
+@media (max-width:860px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Hero lamp, fades into the black page */
+.lit{position:relative;display:flex;justify-content:center;margin-top:clamp(16px,3vw,40px)}
+.lit button{all:unset;cursor:zoom-in;display:block;width:min(100%,880px)}
+.lit img{width:100%;height:auto;max-height:100vh;object-fit:cover;
+  -webkit-mask-image:radial-gradient(ellipse 62% 60% at 50% 50%,#000 55%,transparent 100%);
+  mask-image:radial-gradient(ellipse 62% 60% at 50% 50%,#000 55%,transparent 100%)}
+
+/* Text blocks between images */
+.block{padding-block:clamp(56px,9vw,140px) clamp(24px,3vw,44px)}
+.block .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:12px clamp(24px,5vw,80px)}
+.block h3{font-size:clamp(1.7rem,3.2vw,2.8rem);line-height:1.05;margin-top:8px}
+.block .copy p:first-child{color:var(--ink);font-size:1.12rem;line-height:1.7}
+@media (max-width:760px){.block .wrap{grid-template-columns:minmax(0,1fr)}}
+.goals{display:grid;gap:0;margin-top:1.2em;max-width:44em}
+.goals div{display:grid;grid-template-columns:minmax(0,12em) minmax(0,1fr);gap:4px 24px;padding:14px 0;border-top:1px solid var(--line);line-height:1.6}
+.goals div:last-child{border-bottom:1px solid var(--line)}
+.goals b{color:var(--ink);font-weight:600}
+@media (max-width:640px){.goals div{grid-template-columns:minmax(0,1fr)}}
+
+/* Image rows */
+.rows{display:grid;gap:clamp(3px,.5vw,6px)}
+.r1{grid-template-columns:minmax(0,1fr)}
+.r2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.r3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.r4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.r4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.r3{grid-template-columns:minmax(0,1fr)}}
+.ph{display:block;position:relative;width:100%;padding:0;margin:0;border:0;background:#0b0a09;overflow:hidden;cursor:zoom-in;aspect-ratio:var(--r,4/5)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .5s}
+.ph:hover img{transform:scale(1.03)}
+.ph.auto{aspect-ratio:auto}
+.ph.auto img{height:auto}
+.ph .tag{position:absolute;left:12px;bottom:12px;padding:2px 10px;border-radius:99px;background:rgba(0,0,0,.65);color:var(--ink);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.8}
+.a45{--r:4/5}.a34{--r:3/4}.a67{--r:6/7}
+.cap{font-size:.84rem;color:var(--dim);padding:10px 0 0;line-height:1.6}
+.cap.wrap{padding-top:10px}
+.bleed .wrap{max-width:none}
+.pale{background:#fff}
+.stage{margin-top:clamp(40px,6vw,96px)}
+@media (prefers-reduced-motion:reduce){.ph img{transition:none}.ph:hover img{transform:none}html{scroll-behavior:auto}}
+
+/* Collection captions */
+.names{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(3px,.5vw,6px)}
+.names figure{margin:0}
+.names .pic{aspect-ratio:4/5;background:#fff;overflow:hidden}
+.names img{width:100%;height:100%;object-fit:cover}
+.names figcaption{padding:12px 0 0;line-height:1.5}
+.names b{display:block;color:var(--ink);font-weight:600;font-size:1.1rem}
+@media (max-width:640px){.names{grid-template-columns:minmax(0,1fr)}}
+
+/* Build */
+.build{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(3px,.5vw,6px);align-items:start}
+@media (max-width:760px){.build{grid-template-columns:minmax(0,1fr)}}
+.legend{list-style:none;margin:20px 0 0;padding:0}
+.legend li{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:.95rem;line-height:1.5}
+.legend li:last-child{border-bottom:1px solid var(--line)}
+.legend b{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;padding-top:3px}
+
+/* About */
+.about{padding-block:clamp(64px,10vw,150px) 0;border-top:1px solid var(--line);margin-top:clamp(64px,10vw,150px)}
+.about h2{font-size:clamp(2.6rem,7vw,6rem);line-height:.95;font-weight:700;letter-spacing:-.04em;margin:12px 0 clamp(28px,5vw,64px)}
+.zh-s{color:var(--dim);font-size:.85rem;letter-spacing:.08em;margin-left:.6em;text-transform:none}
+.rowx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:10px clamp(24px,5vw,80px);padding:clamp(22px,3vw,36px) 0;border-top:1px solid var(--line)}
+.rowx:last-of-type{border-bottom:1px solid var(--line)}
+@media (max-width:760px){.rowx{grid-template-columns:minmax(0,1fr)}}
+.sk{display:grid;gap:14px}
+.sk div{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px}
+.sk .g{flex:0 0 100%;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.sk span.t{color:var(--ink);font-size:1rem;border:1px solid var(--line);border-radius:99px;padding:3px 16px;line-height:1.7}
+.edu{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.edu li{display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:8px 14px;padding:10px 0;line-height:1.5}
+.edu li + li{border-top:1px solid var(--line)}
+.edu .i{color:var(--accent);font-size:.8rem;letter-spacing:.1em;padding-top:4px}
+.edu b{display:block;color:var(--ink);font-weight:600;font-size:1.1rem}
+.edu small{color:var(--dim);font-size:.9rem}
+.award{line-height:1.6}
+.award b{display:block;color:var(--ink);font-weight:600;font-size:1.1rem}
+.award small{color:var(--dim);font-size:.9rem}
+
+/* Contact */
+.contact{margin-top:clamp(72px,11vw,170px);padding-block:clamp(56px,9vw,130px) calc(env(safe-area-inset-bottom,0px) + clamp(24px,3vw,40px));border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(2.8rem,9vw,8rem);line-height:.92;font-weight:700;letter-spacing:-.045em}
+.contact h2 span{color:var(--accent)}
+.contact .row{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;margin-top:clamp(24px,4vw,48px)}
+.mail{font-size:clamp(1.15rem,2.6vw,1.8rem);color:var(--ink);font-weight:500;overflow-wrap:anywhere;user-select:all}
+.cbtn{font:inherit;font-size:.85rem;font-weight:600;background:var(--accent);color:#1A0E06;border:0;border-radius:99px;padding:9px 20px;cursor:pointer;line-height:1.6}
+.cbtn:hover{filter:brightness(1.08)}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:clamp(40px,6vw,88px);font-size:.84rem;color:var(--dim)}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lb img{max-width:100%;max-height:100%;object-fit:contain}
+.lb button{position:absolute;top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));font:inherit;font-size:.85rem;font-weight:600;background:transparent;color:var(--ink);border:1px solid #4a4540;border-radius:99px;padding:6px 16px;cursor:pointer;line-height:1.6}
+</style>
+</head>
+<body>
+
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top">WU HAO</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#garden">Garden</a></li>
+      <li><a href="#mar">Mar</a></li>
+      <li><a href="#noseee">Noseee</a></li>
+      <li><a href="#dkc">DKC</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <section class="intro">
+    <div class="wrap intro-grid">
+      <figure class="me">
+        <img src="https://github.com/user-attachments/assets/c2c83225-179a-4fed-8f08-2ab8379af656" width="569" height="729" alt="Portrait of Wu Hao">
+        <figcaption><b>吴昊 · Wu Hao</b><br>Industrial Designer &middot; 工业设计师</figcaption>
+      </figure>
+      <div>
+        <p class="label"><b>&bull;</b>&nbsp; Industrial designer &nbsp;/&nbsp; Open to work</p>
+        <p class="hello">Hello! My name is</p>
+        <h1>Wu Hao<span>.</span></h1>
+        <p class="bio">I have lived in Russia for five years and understand local users&rsquo; habits, aesthetic preferences and design context. I can act as a &ldquo;design bridge&rdquo; for China&ndash;Russia projects, or for teams taking Chinese brands overseas.</p>
+        <p class="bio">在俄生活 5 年，深刻理解本地用户习惯、审美偏好与设计语境，能作为中俄合作项目或国内品牌出海团队的“设计桥梁”。</p>
+        <div class="cta"><a href="#work">Selected work</a><a href="#contact">Contact</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="idx">
+    <div class="wrap">
+      <p class="label">Selected work &nbsp;/&nbsp; 4 projects</p>
+      <div class="idx-grid">
+        <a class="card" href="#garden">
+          <div class="pic"><img src="https://github.com/user-attachments/assets/432ed473-f4ca-41e8-a95c-b6e37cb80cdd" width="1125" height="1500" alt="The Garden lamp glowing orange in the dark"></div>
+          <div class="meta"><span class="n">01</span><div><h3>Garden</h3><p>Table lamps shaped like garden flowers</p></div></div>
+        </a>
+        <a class="card" href="#mar">
+          <div class="pic"><img src="https://github.com/user-attachments/assets/607e873b-8c58-4a9f-a578-74ede8d14a4c" width="971" height="1300" alt="Mar lounge chair at the water&rsquo;s edge on a sandy beach"></div>
+          <div class="meta"><span class="n">02</span><div><h3>Mar</h3><p>Terrace furniture inspired by the sea</p></div></div>
+        </a>
+        <a class="card" href="#noseee">
+          <div class="pic"><img src="https://github.com/user-attachments/assets/6140fe5f-2bc3-4976-9924-42c80c5fc394" width="1400" height="1976" alt="A hand wearing the Noseee sensor glove, white sleeve behind"></div>
+          <div class="meta"><span class="n">03</span><div><h3>Noseee</h3><p>A wearable smell assistant for people with anosmia</p></div></div>
+        </a>
+        <a class="card" href="#dkc">
+          <div class="pic"><img src="https://github.com/user-attachments/assets/f2d6d004-5b8d-431f-b941-69df20e0235d" width="1400" height="1976" alt="Top panel of the aluminium UPS with USB ports, status light and buttons on a red background"></div>
+          <div class="meta"><span class="n">04</span><div><h3>DKC UPS</h3><p>An uninterruptible power supply that organises the desk</p></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="garden" class="open">
+    <div class="wrap">
+      <p class="label">Project 01 &nbsp;/&nbsp; Lighting</p>
+      <h2>Garden</h2>
+      <div class="copy">
+        <p>A collection of table lamps shaped like garden flowers, 3D printed in layered, translucent PLA. Light that grows out of care.</p>
+        <p>At the heart of the project is the image of a flower as the result of work, care and time.</p>
+        <p class="zh">灵感来自童年时家里的菜园与花园：每年由母亲和外婆照料，种植、除草、绑枝。这种不起眼却持续的劳动，随时间变成了美。灯具把这个过程变成隐喻，由照料而生的光，让空间充满温暖与舒适。</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Collection</dt><dd>Narcissus, Poppy, Tulip</dd></div>
+        <div><dt>Making</dt><dd>FDM 3D printing, PLA, fuzzy skin</dd></div>
+        <div><dt>Light source</dt><dd>Smart E14 bulb</dd></div>
+        <div><dt>Shade</dt><dd>Three nested shades, up to &Oslash;&nbsp;215&nbsp;mm</dd></div>
+      </dl>
+    </div>
+
+    <div class="lit">
+      <button data-lb type="button"><img src="https://github.com/user-attachments/assets/432ed473-f4ca-41e8-a95c-b6e37cb80cdd" width="1125" height="1500" alt="The Garden lamp glowing orange in the dark"></button>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Concept</p><h3>A flower is what time and care leave behind.</h3></div>
+      <div class="copy">
+        <p>The collection looks back at the family dacha garden of my childhood, which my mother and grandmother tended every year: planting, weeding, tying up, looking after. That unnoticed but constant labour slowly turns into beauty.</p>
+        <p>The lamps carry this process as a metaphor. Light is born from care and fills the room with warmth and a feeling of comfort.</p>
+        <p>The forms are inspired by the narcissus, the poppy or peony, and the tulip. The key images come from the flowers most often found in a garden: tulips, poppies, peonies, dandelions, irises and narcissi.</p>
+        <div class="goals">
+          <div><b>Mana Fabric style</b><span>Develop a collection of interior lamps in the Mana Fabric style.</span></div>
+          <div><b>Within reach</b><span>Make them affordable, in both price and quality, for the Russian market.</span></div>
+          <div><b>Meaning in the object</b><span>Combine function, meaning and aesthetics in one design.</span></div>
+        </div>
+      <p class="zh">这个系列回望我童年时家里的田园花园：母亲和外婆每年都要照料，播种、除草、绑枝、悉心看护。这些不起眼却持续不断的劳动，慢慢变成了美。灯具把这一过程作为隐喻：光源于照料，让房间充满温暖与舒适。造型灵感来自水仙、罂粟（或牡丹）和郁金香。</p></div>
+    </div>
+  </section>
+  <div class="rows r4">
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/f6e0bcaf-5f5c-40df-bddb-82d5ddcc44b3" width="1216" height="1400" alt="The lamp glowing among crocuses under a tree" loading="lazy" style="object-position:50% 60%"></button>
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/816ee0b3-757a-46f0-96d3-f34e6048c24c" width="733" height="1100" alt="The lamp in grass among crocuses" loading="lazy" style="object-position:50% 55%"></button>
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/c45aa455-d6dd-410b-a6cc-e3f25eaa2341" width="872" height="1300" alt="The lamp among white anemones in low sun" loading="lazy" style="object-position:50% 62%"></button>
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/f9abe3bc-d967-4452-8433-9324dbca0bc7" width="640" height="800" alt="A small cottage surrounded by a wildflower garden in a mountain valley" loading="lazy"></button>
+  </div>
+
+  <section id="process" class="block">
+    <div class="wrap">
+      <div><p class="label">Reference</p><h3>Moodboard</h3></div>
+      <div class="copy"><p>The moodboard collects the photographs that set the look of the project: stylised flower illustrations, textured photographs of stems, and translucent materials that scatter light.</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/e89f9ba0-5853-4bbc-876b-4adc0657a1f6" width="2200" height="1200" alt="Moodboard of garden flowers and a village road at sunset" loading="lazy"></button>
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/3fdad48e-906b-4d0a-9652-87ecf8bb95d4" width="2200" height="1200" alt="Moodboard of flat flower illustrations, leaf textures and translucent discs" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Form</p><h3>Sketching</h3></div>
+      <div class="copy"><p>Sketching was a search for form and character. I settled on an elongated table lamp with a simplified flower shape.</p><p class="zh">草图是对形态与性格的探索，最终我选定了一款细长的台灯，配以简化的花形。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/e2b38fff-38e5-4fc4-82c6-9cfe58356974" width="2200" height="1200" alt="Flower references next to sketches and renders of lamp shapes" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Test</p><h3>Prototyping</h3></div>
+      <div class="copy"><p>Mock-ups were printed on a home 3D printer in several kinds of PLA. The lamp went through a number of iterations, and both the structure of the assembly and the overall form changed along the way.</p><p class="zh">模型用家用 3D 打印机、以多种 PLA 材料打印。灯具经历了多次迭代，装配结构和整体造型都在过程中发生了变化。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/8251c062-9a16-4b93-be82-66534fd0668c" width="2200" height="1200" alt="Early printed prototypes in clear and blue plastic, lit and unlit, with a bulb sketch" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Result</p><h3>Three flowers, three lamps</h3></div>
+      <div class="copy"><p>Each lamp has its own colour and its own flower. The shape stays simple: a slim stem, a ruffled bloom, a glowing centre.</p><p class="zh">每盏灯有自己的颜色和花。造型保持简洁：细长的花茎、褶皱的花朵、发光的花心。</p></div>
+    </div>
+  </section>
+  <div class="names">
+    <figure><div class="pic"><img src="https://github.com/user-attachments/assets/0a3f8ce2-1ec7-44ea-b4ce-250922d2b06a" width="880" height="1100" alt="Illustration of the Narcissus lamp in orange" loading="lazy"></div><figcaption class="wrap" style="padding-inline:0"><b>Narcissus</b>Tangerine orange</figcaption></figure>
+    <figure><div class="pic"><img src="https://github.com/user-attachments/assets/967fc4dc-c452-4ae6-80ed-7103fce21543" width="880" height="1100" alt="Illustration of the Poppy lamp in pink" loading="lazy"></div><figcaption class="wrap" style="padding-inline:0"><b>Poppy</b>Soft pink</figcaption></figure>
+    <figure><div class="pic"><img src="https://github.com/user-attachments/assets/6e394dfc-1296-4bcb-b125-92385fa9ebfc" width="880" height="1100" alt="Illustration of the Tulip lamp in green" loading="lazy"></div><figcaption class="wrap" style="padding-inline:0"><b>Tulip</b>Fresh green</figcaption></figure>
+  </div>
+
+  <section id="gallery" class="block">
+    <div class="wrap">
+      <div><p class="label">Surface &amp; light</p><h3>Light through layers</h3></div>
+      <div class="copy"><p>Printed prototype, photographed lit. The fuzzy-skin finish breaks the light into soft, warm grain.</p></div>
+    </div>
+  </section>
+  <div class="rows r2">
+    <button class="ph a34" data-lb type="button"><img src="https://github.com/user-attachments/assets/45026d24-e3d9-4604-9086-35bbdeca966f" width="975" height="1300" alt="Looking down into the three nested shades, lit from inside" loading="lazy"></button>
+    <button class="ph a34" data-lb type="button"><img src="https://github.com/user-attachments/assets/c391b845-4ca4-4580-a538-e5d36d445aa3" width="975" height="1300" alt="Close view of the ribbed rim of the shade" loading="lazy"></button>
+  </div>
+  <div class="rows r2" style="margin-top:clamp(3px,.5vw,6px)">
+    <button class="ph a34" data-lb type="button"><img src="https://github.com/user-attachments/assets/066cadaf-504f-4497-b8ba-a1d1c5a29b23" width="974" height="1300" alt="Macro of the fuzzy-skin texture where the stem meets the shade" loading="lazy"></button>
+    <button class="ph a34" data-lb type="button"><img src="https://github.com/user-attachments/assets/e2057d0b-6469-4918-a7b6-ec77a85e4b9f" width="975" height="1300" alt="The scalloped orange base and the lower part of the stem" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Build</p><h3>Parts and materials</h3></div>
+      <div class="copy"><p>Three nested shades, a core cap, a base and a smart bulb. Every printed part uses fuzzy skin for the soft, textured surface.</p><p class="zh">三层嵌套灯罩、芯盖、底座和智能灯泡。所有打印件都采用绒面（fuzzy skin）工艺，表面柔和有质感。</p></div>
+    </div>
+  </section>
+  <div class="build">
+    <div>
+      <button class="ph auto" data-lb type="button"><img src="https://github.com/user-attachments/assets/ec40288a-c2a3-40a1-bcf6-28f87d47d744" width="919" height="1300" alt="Exploded view of the lamp with its parts labelled in Russian" loading="lazy"></button>
+      <p class="cap">Exploded view. Labels in the image are in Russian; the English list is on the right.</p>
+    </div>
+    <div>
+      <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/a3c26cf4-1933-4ac8-913b-370e4bfeecf6" width="1080" height="1200" alt="Top view drawing of the three nested shades, largest diameter 215 millimetres" loading="lazy"></button>
+      <p class="cap">Top view of the three nested shades. Largest diameter 215&nbsp;mm.</p>
+      <ul class="legend">
+        <li><b>Shade 1</b><span>Clear PLA (ESUN), fuzzy skin</span></li>
+        <li><b>Shade 2</b><span>Clear PLA (ESUN), fuzzy skin</span></li>
+        <li><b>Shade 3</b><span>Matte tangerine PLA (ESUN), fuzzy skin</span></li>
+        <li><b>Base</b><span>Matte tangerine PLA (ESUN), fuzzy skin</span></li>
+        <li><b>Bulb</b><span>Yandex smart bulb, E14</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Visualisation</p><h3>Renders</h3></div>
+      <div class="copy"><p>Studio and shelf renders, in daylight and in a dark room.</p><p class="zh">工作室与置物架渲染，白天与暗室两种光线。</p></div>
+    </div>
+  </section>
+  <div class="rows r2">
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/e83a3622-e4be-4470-a822-bdf2d9feea60" width="880" height="1100" alt="Render of the lamp against a dark background" loading="lazy"></button>
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/bde58cb8-198e-4e19-8622-efbd9a4c306d" width="880" height="1100" alt="Render of the lamp on a pale grey surface" loading="lazy"></button>
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/9c116291-89de-4852-b3d7-5c8be023a6cb" width="1127" height="1300" alt="Render of the lamp lit on a wooden shelf in a dark room" loading="lazy"></button>
+    <button class="ph a45" data-lb type="button"><img src="https://github.com/user-attachments/assets/34c65b79-2547-41ec-9b0a-6453c05e7de9" width="1127" height="1300" alt="Render of the lamp on a wooden shelf from above" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Context</p><h3>At home</h3></div>
+      <div class="copy"><p>On shelves and desks, switched off by day and on in the evening.</p><p class="zh">放在置物架和书桌上，白天熄灭，傍晚点亮。</p></div>
+    </div>
+  </section>
+  <div class="rows r3">
+    <button class="ph a67" data-lb type="button"><img src="https://github.com/user-attachments/assets/33a70345-bf78-4ff7-bd7f-587f911402ab" width="1217" height="1400" alt="The lamp on a cream shelf in a living room" loading="lazy"></button>
+    <button class="ph a67" data-lb type="button"><img src="https://github.com/user-attachments/assets/405061c6-66fe-46c3-95d9-113bf162aa49" width="1217" height="1400" alt="The lamp on a grey desk shelf beside an orange chair" loading="lazy"></button>
+    <button class="ph a67" data-lb type="button"><img src="https://github.com/user-attachments/assets/3c44ac68-08ff-4393-acea-c7032d28ce38" width="1217" height="1400" alt="The lamp on a bright blue metal shelf" loading="lazy"></button>
+  </div>
+  <div class="rows r2" style="margin-top:clamp(3px,.5vw,6px)">
+    <button class="ph a67" data-lb type="button"><img src="https://github.com/user-attachments/assets/75d938f8-1713-4711-8f8f-673a6e839c20" width="1127" height="1300" alt="The lamp switched off on a wooden shelf" loading="lazy"><span class="tag">Off</span></button>
+    <button class="ph a67" data-lb type="button"><img src="https://github.com/user-attachments/assets/ad73c1db-3fde-42c5-a8c0-c42b05ee3dd1" width="1127" height="1300" alt="The same lamp switched on" loading="lazy"><span class="tag">On</span></button>
+  </div>
+
+  <!-- ============ MAR ============ -->
+  <section id="mar" class="open stripe">
+    <div class="wrap">
+      <p class="label">Project 02 &nbsp;/&nbsp; Terrace furniture &nbsp;/&nbsp; Annki studio</p>
+      <h2>Mar</h2>
+      <div class="copy">
+        <p>The Mar collection (&ldquo;mar&rdquo; is Portuguese for &ldquo;sea&rdquo;) is inspired by the atmosphere of the Portuguese and Greek coasts, the movement of waves and the feeling of living water.</p>
+        <p>The smooth curves of the metal frame recall the lines of a sea current, while soft volumes create a sense of calm and comfort. Tactile textures and a light structure form a place to rest, filled with light, air and a seaside mood.</p>
+        <p class="zh">Mar（葡萄牙语“海”）系列的灵感来自葡萄牙和希腊海岸的氛围、海浪的律动和流动之水的感觉。金属框架柔和的曲线呼应洋流的线条，柔软的体量营造出平静与舒适。触感的材质和轻盈的结构，构成一个充满光线、空气与海滨气息的休憩之所。</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Collection</dt><dd>Lounge chair, footstool, screen, coffee table</dd></div>
+        <div><dt>Brief</dt><dd>Terrace furniture for Annki studio</dd></div>
+        <div><dt>Frame</dt><dd>Round metal tube, powder coated</dd></div>
+        <div><dt>Soft parts</dt><dd>Removable cushions in outdoor fabric</dd></div>
+      </dl>
+    </div>
+  </section>
+  <div class="rows r2" style="margin-top:clamp(24px,4vw,56px)">
+    <button class="ph" style="--r:3/4" data-lb type="button"><img src="https://github.com/user-attachments/assets/607e873b-8c58-4a9f-a578-74ede8d14a4c" width="971" height="1300" alt="Mar lounge chair at the water&rsquo;s edge on a sandy beach" loading="lazy" style="object-position:50% 65%"></button>
+    <button class="ph" style="--r:3/4" data-lb type="button"><img src="https://github.com/user-attachments/assets/ec69b7f6-abe8-42dc-b8d9-48f9a7e6ad27" width="2182" height="1199" alt="A woman reading in the Mar lounge chair beside the folding screen and side table" loading="lazy" style="object-position:30% 50%"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Brief</p><h3>Furniture for resting outdoors</h3></div>
+      <div class="copy">
+        <p>The task of this module was to design terrace furniture for Annki studio. I chose the lounge direction: furniture for relaxing in the open air.</p>
+        <p>The inspiration was the aesthetics and atmosphere of Portugal, long beaches, the sea breeze and giant waves. All of this led me to the form language of the collection.</p>
+        <p>The photographs show collages I assembled to find the visual language and to convey the mood of the project.</p>
+      <p class="zh">这个模块的任务是为 Annki 工作室设计露台家具，我选择了休闲（lounge）方向：适合在户外放松的家具。灵感来自葡萄牙的美学与氛围：绵长的海滩、海风和巨浪，由此引出了系列的造型语言。照片中的拼贴，是我为寻找视觉语言、传达项目氛围而制作的。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/c521edbb-d017-4534-b77e-6480ea9a65bb" width="2200" height="890" alt="Moodboard of waves, ropes, fishing nets and blue and white architecture, with orange accents" loading="lazy"></button>
+  </div>
+  <div class="collages" style="margin-top:clamp(3px,.5vw,6px)">
+    <button class="ph" data-lb type="button"><img src="https://github.com/user-attachments/assets/619f150a-19b1-4e9e-a6be-f5325ec99f47" width="506" height="900" alt="Collage of oranges, striped parasols, a lighthouse, sails and rope" loading="lazy"></button>
+    <button class="ph" data-lb type="button"><img src="https://github.com/user-attachments/assets/2e7e57fb-3108-4c98-b3c5-922c4ec2013e" width="506" height="900" alt="Collage of shells, Portuguese tiles, a Lisbon tram and the Azores coast" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Research</p><h3>What the market does</h3></div>
+      <div class="copy">
+        <p>While researching terrace furniture from a range of Russian brands, I found recurring design patterns in the products on sale.</p>
+        <p>They are often made of metal with a powder-coated finish, built as an open frame, with removable parts in the form of cushions.</p>
+      <p class="zh">调研俄罗斯多个品牌的露台家具时，我发现在售产品中反复出现一些设计模式：多为粉末涂层金属，开放式框架，配有可拆卸的坐垫。</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Form</p><h3>Sketching</h3></div>
+      <div class="copy"><p>Pages of sketches exploring waves, whales, rolled cushions and flowing frames. Pink stars mark the favourites.</p><p class="zh">一页页草图探索了海浪、鲸鱼、卷起的坐垫和流动的框架，粉色星标是入选的方案。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/2db69708-d666-4e1c-afd5-8047e3d6280b" width="2200" height="1161" alt="Four pages of blue marker sketches of lounge chairs, footstools and screens, some marked with pink stars" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Exploration</p><h3>&ldquo;Is this really the one?&rdquo;</h3></div>
+      <div class="copy"><p>Earlier concept visualisations next to the final design, followed by neural-network sketch visualisations built on 3D models.</p><p class="zh">早期概念效果图与最终方案的对比，之后是基于 3D 模型的神经网络草图渲染。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/8967f1d5-6053-4695-a7de-1ba96165919b" width="2200" height="971" alt="Quilted blue lounge furniture concepts in a pool setting beside the final design: a wave-shaped screen, side table and chair" loading="lazy"></button>
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/1530fe34-67bc-4f56-8700-5056d1d91ef3" width="2200" height="859" alt="Neural-network sketch visualisations of the chair, screen and side table in blue and yellow" loading="lazy"></button>
+  </div>
+  <p class="cap wrap" style="padding-top:10px">Neural-network sketch visualisations based on 3D models.</p>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Result</p><h3>The collection</h3></div>
+      <div class="copy"><p>A lounge chair, a footstool, a screen and a coffee table, in a round powder-coated tube frame with soft cushions, shown here in several colourways.</p><p class="zh">躺椅、脚凳、屏风和咖啡桌，采用圆管粉末涂层框架和软坐垫，这里展示了多种配色。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/4de40277-80f2-48e0-9cc9-3c0445531a4d" width="2200" height="700" alt="The collection in three colourways: olive green, warm yellow and light blue" loading="lazy"></button>
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/88f65788-8c46-452f-b192-04834da16e50" width="2200" height="804" alt="The collection with white cushions and blue, red and sage green frames" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Detail</p><h3>Seen from above</h3></div>
+      <div class="copy"><p>Sunlight and leaf shadows across the cushions, the tubular arms and the side table.</p><p class="zh">阳光和树叶的影子落在坐垫、管状扶手和边桌上。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/e18e77c0-3ed1-4d69-8281-a8b00fcb49b8" width="2192" height="1201" alt="Two top-down views of the blue-framed chair, footstool and side table in dappled light" loading="lazy"></button>
+  </div>
+
+  <!-- ============ NOSEEE ============ -->
+  <section id="noseee" class="open stripe">
+    <div class="wrap">
+      <p class="label">Project 03 &nbsp;/&nbsp; Wearable IoT &nbsp;/&nbsp; Anosmia</p>
+      <h2>Noseee</h2>
+      <div class="copy">
+        <p>Noseee is a compact helper for smell-related situations at home. There is no universal, compact device on the market made specifically for everyday help for people with anosmia.</p>
+        <p>There is potential for a hybrid IoT device with several sensors and a mobile interface: a device that recognises unpleasant smells and warns the wearer, a small companion for daily routines.</p>
+        <p class="zh">Noseee 是一款在家庭场景中辅助嗅觉的小型助手。市场上缺少专门面向失嗅症人群日常辅助的通用小型设备，而带有多个传感器和移动端界面的混合式 IoT 设备有这方面的潜力：识别难闻气味并提醒佩戴者，成为日常生活中的小帮手。</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Type</dt><dd>Wearable IoT device, worn as a glove</dd></div>
+        <div><dt>User</dt><dd>People diagnosed with anosmia</dd></div>
+        <div><dt>Sensing</dt><dd>Gas sensors at the fingertips</dd></div>
+        <div><dt>Feedback</dt><dd>Short vibration, statistics in a web interface</dd></div>
+      </dl>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph" style="--r:16/9" data-lb type="button"><img src="https://github.com/user-attachments/assets/ca08ff02-b305-46ae-9b18-a53fe1da52e7" width="2000" height="1125" alt="Render of the Noseee glove with sensor rings and a wrist band on a dark background" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Context</p><h3>What is anosmia?</h3></div>
+      <div class="copy"><p>Anosmia is the complete loss of the ability to perceive smells. It can be congenital or acquired, for example after injuries, viral illnesses (including after COVID-19) or neurological disorders.</p><p>The device is meant to signal substances that give off a bad smell or point to a hazardous environment.</p><p class="zh">失嗅症是完全丧失嗅觉的能力，可以是先天的，也可以是后天获得的，例如外伤、病毒感染（包括新冠之后）或神经系统疾病。设备用于提示会散发异味、或指示危险环境的物质。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/0e244f29-243d-412c-96ce-c53b9d3da09b" width="1377" height="1285" alt="Line drawing of a worried person imagining spoiled food, smoke, perfume and other smells" loading="lazy"></button>
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/bb470c28-47ab-4109-9b1b-dcf8458b9437" width="2000" height="250" alt="Three cloud labels for the gases hydrogen sulphide, ammonia and a hydrogen link" loading="lazy"></button>
+  </div>
+  <p class="cap wrap" style="padding-top:10px">Gases to detect: hydrogen sulphide (H₂S), ammonia (NH₃) and others. 硫化氢、氨气等。</p>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">System</p><h3>Architecture</h3></div>
+      <div class="copy"><p>The vibration motor and wireless charging sit on the wrist. The gas analysers are at the fingers. The battery and controller are on the back of the hand.</p><p class="zh">振动马达和无线充电位于手腕处，气体分析仪在指尖，电池和控制器在手背。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/abbbe62e-593e-468f-b484-dbe77623b44f" width="1757" height="1214" alt="Diagram of the glove showing sensors at the fingers, the controller on the back of the hand, and the motor and charger at the wrist" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Scenario</p><h3>How it is used</h3></div>
+      <div class="copy"><p>The hand in the glove is brought up to an object. When an unpleasant smell appears, the device gives a short vibration as an indicator. Analysis statistics arrive in a web interface.</p><p class="zh">戴手套的手靠近物体。出现难闻气味时，设备会发出一次短振动作为提示，分析统计数据则发送到网页界面。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/a04aa1c1-4d91-4587-ad1b-4f8d60c6a660" width="2000" height="932" alt="Sketch sequence: a hand reaches a bottle, the glove vibrates, a phone shows the result, and a yogurt pot is thrown away" loading="lazy"></button>
+  </div>
+  <div class="rows r3">
+    <button class="ph" style="--r:3/2" data-lb type="button"><img src="https://github.com/user-attachments/assets/435226d2-8f03-47ea-9fbc-d130da39a7bc" width="1536" height="1024" alt="A hand with the Noseee sensors against a plain wall" loading="lazy"></button>
+    <button class="ph" style="--r:3/2" data-lb type="button"><img src="https://github.com/user-attachments/assets/14df0164-8535-42e5-866d-be9154efa532" width="1536" height="1024" alt="A woman drinking in front of an open fridge, wearing the glove" loading="lazy"></button>
+    <button class="ph" style="--r:3/2" data-lb type="button"><img src="https://github.com/user-attachments/assets/80f26fd3-8a14-4248-836a-c8ed4a162929" width="1536" height="1024" alt="A hand reaching toward a kitchen counter in striped light" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Prototype</p><h3>Built and tested</h3></div>
+      <div class="copy"><p>The prototype uses all the components of the device except the gas analysers, which were replaced with MQ-2 sensors, and the wireless charger, replaced with a Type-C charging module.</p><p class="zh">原型使用了设备的全部组件，只是把气体分析仪换成了 MQ-2 传感器，无线充电器换成了 Type-C 充电模块。</p></div>
+    </div>
+  </section>
+  <div class="rows r3">
+    <button class="ph" style="--r:3/2" data-lb type="button"><img src="https://github.com/user-attachments/assets/b905656d-737a-4b42-a863-44559ce4a03f" width="1800" height="1193" alt="White glove with exposed wiring and a controller on the wrist" loading="lazy"></button>
+    <button class="ph" style="--r:3/2" data-lb type="button"><img src="https://github.com/user-attachments/assets/2d04202e-6f4e-43ee-b2be-d881a48a73fb" width="1440" height="954" alt="Open hand in a white glove with the board on the back of the hand" loading="lazy"></button>
+    <button class="ph" style="--r:3/2" data-lb type="button"><img src="https://github.com/user-attachments/assets/5174ecd3-d818-4d86-aa38-a4940e12cb3e" width="1440" height="954" alt="Glove prototype with battery and motor wired to the controller" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Visualisation</p><h3>The finished idea</h3></div>
+      <div class="copy"><p>Renders of the glove and its wrist module, and the companion app that reports what the sensors pick up.</p><p class="zh">手套和腕部模块的渲染图，以及显示传感器检测结果的配套 App。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph" style="--r:16/9" data-lb type="button"><img src="https://github.com/user-attachments/assets/2be64c0f-0048-4882-838f-a9b19b0c6d5c" width="2000" height="1125" alt="Render of a hand with the sensor rings beside a floating wrist module" loading="lazy"></button>
+    <button class="ph" style="--r:16/9" data-lb type="button"><img src="https://github.com/user-attachments/assets/6b76bd55-c4df-4ff7-baf3-6fb5eed36109" width="2000" height="1121" alt="Render of the glove on a hand with two inset photos of the prototype" loading="lazy"></button>
+  </div>
+  <div class="rows r2">
+    <button class="ph" style="--r:2/3" data-lb type="button"><img src="https://github.com/user-attachments/assets/68021ac9-167b-459f-89de-9b2b17ff7402" width="1322" height="1979" alt="Phone on a white cloth showing the Noseee app" loading="lazy"></button>
+    <button class="ph" style="--r:2/3" data-lb type="button"><img src="https://github.com/user-attachments/assets/6140fe5f-2bc3-4976-9924-42c80c5fc394" width="1400" height="1976" alt="Close view of the glove on a hand" loading="lazy"></button>
+  </div>
+
+  <!-- ============ DKC ============ -->
+  <section id="dkc" class="open stripe">
+    <div class="wrap">
+      <p class="label">Project 04 &nbsp;/&nbsp; Uninterruptible power supply &nbsp;/&nbsp; DKC</p>
+      <h2>DKC UPS</h2>
+      <div class="copy">
+        <p>An uninterruptible power supply for home and office that combines equipment protection with workspace organisation.</p>
+        <p>A modular storage system adapts to the user&rsquo;s needs and helps keep the desk in order. The aluminium body removes heat efficiently, and the compact size lets the device sit even on a small desk.</p>
+        <p class="zh">面向家庭和办公室的不间断电源（UPS），把设备保护和工作空间整理结合在一起。模块化收纳系统可根据用户需求调整，帮助保持桌面整洁；铝制机身高效散热，小巧的尺寸让它即使在有限的桌面空间也能摆放。</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Product</dt><dd>UPS for home and office, for DKC</dd></div>
+        <div><dt>Size</dt><dd>300 &times; 220 &times; 100 mm</dd></div>
+        <div><dt>Body</dt><dd>Aluminium, satin finish</dd></div>
+        <div><dt>Buttons</dt><dd>Polycarbonate, RAL 9022, matte</dd></div>
+      </dl>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph" style="--r:16/9" data-lb type="button"><img src="https://github.com/user-attachments/assets/2d4e671d-d58a-414f-95b7-6fca0b45482f" width="2000" height="1221" alt="The UPS on a desk with headphones, glasses and pens hung on its modular side panel" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Concept</p><h3>Protection that tidies the desk</h3></div>
+      <div class="copy"><p>Most UPS units are hidden under the table. This one is designed to stay on it: a small aluminium box that protects the equipment and turns its side into a place for everyday things.</p><p>Two versions: brushed aluminium and black.</p><p class="zh">大多数 UPS 都藏在桌下，而这一款被设计成放在桌面上：一个小巧的铝制盒子，既保护设备，又把侧面变成放日常物品的地方。有铝色和黑色两种版本。</p></div>
+    </div>
+  </section>
+  <div class="rows r2">
+    <button class="ph" style="--r:4/5" data-lb type="button"><img src="https://github.com/user-attachments/assets/556e7ace-e1c1-452d-91fd-07529a84fd99" width="1800" height="1394" alt="The aluminium UPS standing against a red gradient" loading="lazy"></button>
+    <button class="ph" style="--r:4/5" data-lb type="button"><img src="https://github.com/user-attachments/assets/f2d6d004-5b8d-431f-b941-69df20e0235d" width="1400" height="1976" alt="Close view of the top panel and engraved logo against red" loading="lazy"></button>
+  </div>
+  <div class="rows r1" style="margin-top:clamp(3px,.5vw,6px)">
+    <button class="ph" style="--r:16/9" data-lb type="button"><img src="https://github.com/user-attachments/assets/063f03c1-20ea-45ef-9608-38318d670be0" width="2000" height="1157" alt="The black and aluminium versions side by side" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Form</p><h3>Compact, and good at shedding heat</h3></div>
+      <div class="copy"><p>The body is aluminium, which carries heat away efficiently. Small dimensions let the unit fit even on a limited desk surface. A patterned vent runs along the side.</p><p>Overall size is 300 &times; 220 &times; 100 mm (length &times; height &times; depth).</p><p class="zh">铝制机身能高效导热，小巧的尺寸使它即使在有限的桌面上也能放得下，侧面有图案化的散热孔。整体尺寸为 300 × 220 × 100 mm（长 × 高 × 宽）。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph" style="--r:16/10" data-lb type="button"><img src="https://github.com/user-attachments/assets/87273e80-1fc5-4973-9594-f1522f3fb00b" width="2000" height="1262" alt="The UPS with dimensions 300, 220 and 100 marked" loading="lazy"></button>
+    <button class="ph" style="--r:16/10" data-lb type="button"><img src="https://github.com/user-attachments/assets/f00e6aa2-4291-4e14-864c-6a7065e1e4c0" width="2000" height="1201" alt="Back of the UPS with fan, outlets and ports" loading="lazy"></button>
+  </div>
+  <p class="cap wrap" style="padding-top:10px">Back panel: fan, two Schuko and two IEC outlets, mains inlet, USB and network ports, reset button.</p>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Interface</p><h3>Clear indication</h3></div>
+      <div class="copy"><p>A single status light on the top panel lets the user read the state of the device at a glance. Two USB-A and two USB-C ports, a power button and a mute button sit next to it.</p><p class="zh">顶部面板上的一盏状态灯，让用户一眼读懂设备状态；旁边是两个 USB-A、两个 USB-C 接口，以及电源键和静音键。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph" style="--r:16/9" data-lb type="button"><img src="https://github.com/user-attachments/assets/c452c877-107c-48c2-9421-ff797213950c" width="2000" height="1202" alt="Close view of the USB ports, status light and buttons" loading="lazy"></button>
+    <button class="ph" data-lb type="button"><img src="https://github.com/user-attachments/assets/6fc85958-ada1-41dc-9c14-d2a495420458" width="2000" height="1420" alt="Status light meanings: green, yellow, flashing yellow and red" loading="lazy"></button>
+  </div>
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Status light</p><h3>What the colours mean</h3></div>
+      <div class="copy">
+        <dl class="facts" style="margin:0;grid-template-columns:1fr">
+          <div><dt>Green, steady</dt><dd>Mains power; battery charging or already charged</dd></div>
+          <div><dt>Yellow, steady</dt><dd>Power has gone out, running on battery; audible alarm sounds</dd></div>
+          <div><dt>Yellow, flashing</dt><dd>Battery is low</dd></div>
+          <div><dt>Red, steady</dt><dd>Overload: too many devices connected</dd></div>
+        </dl>
+        <p class="zh" style="margin-top:20px">绿灯常亮：市电供电，电池充电中或已充满；黄灯常亮：断电，由电池供电，并有声音提示；黄灯闪烁：电池电量低；红灯常亮：过载，连接的设备过多。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">Materials</p><h3>Finish and details</h3></div>
+      <div class="copy"><p>Satin-finished aluminium body, matte polycarbonate buttons in RAL 9022, and a laser-engraved logo.</p><p class="zh">缎面处理的铝制机身，哑光聚碳酸酯按键（RAL 9022），激光雕刻的标志。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph" data-lb type="button"><img src="https://github.com/user-attachments/assets/de8f3ff3-8485-4b8b-b3e2-be0fa36adc97" width="2000" height="1258" alt="Top panel with callouts: buttons in polycarbonate RAL 9022 matte, aluminium satin body, laser-engraved logo" loading="lazy"></button>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div><p class="label">System</p><h3>Modular storage</h3></div>
+      <div class="copy"><p>A perforated side panel is fixed to the body with pins, and hooks, a shelf and a pen cup clip into its slots. The user chooses what to keep within reach: headphones, cables, glasses, pens, notes.</p><p class="zh">带孔的侧板用销钉固定在机身上，挂钩、搁板和笔筒卡入槽中。用户可以自选要放在手边的东西：耳机、数据线、眼镜、笔、便签。</p></div>
+    </div>
+  </section>
+  <div class="rows r1">
+    <button class="ph auto pale" data-lb type="button"><img src="https://github.com/user-attachments/assets/8b2047aa-b577-44bd-83bc-f0a15de0bc9a" width="2000" height="1221" alt="Exploded view: body, fixings and the modular storage system with shelf, hook and pen cup" loading="lazy"></button>
+    <button class="ph" style="--r:4/3" data-lb type="button"><img src="https://github.com/user-attachments/assets/54767adb-18c8-4eea-8637-7c98349d1c0f" width="2000" height="1422" alt="Cable on a hook, pens in a cup, a sticky note and earbuds on the storage panel" loading="lazy"></button>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <p class="label">About</p>
+      <h2>Skills &amp; background</h2>
+
+      <div class="rowx">
+        <p class="label">Skills<span class="zh-s">软件技能</span></p>
+        <div class="sk">
+          <div><span class="g">3D modelling &amp; rendering</span><span class="t">Rhino</span><span class="t">Blender</span><span class="t">KeyShot</span></div>
+          <div><span class="g">Drawing &amp; image</span><span class="t">AutoCAD</span><span class="t">Photoshop</span><span class="t">Illustrator</span></div>
+          <div><span class="g">Interface &amp; layout</span><span class="t">Figma</span></div>
+        </div>
+      </div>
+
+      <div class="rowx">
+        <p class="label">Education<span class="zh-s">教育经历</span></p>
+        <div>
+          <ul class="edu">
+            <li><span class="i">01</span><div><b>Jiangsu Normal University</b><small>江苏师范大学 &middot; Industrial Design</small></div></li>
+            <li><span class="i">02</span><div><b>Peter the Great St. Petersburg Polytechnic University</b><small>圣彼得堡彼得大帝理工大学 &middot; Industrial Design</small></div></li>
+            <li><span class="i">03</span><div><b>HSE University</b><small>National Research University Higher School of Economics &middot; 俄罗斯国家研究型高等经济大学 &middot; Industrial Design</small></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rowx">
+        <p class="label">Awards<span class="zh-s">荣誉</span></p>
+        <div class="award">
+          <b>China Scholarship Council (CSC) state-sponsored study award, twice</b>
+          <small>国家留学基金委（CSC）公派留学资格，本科和硕士阶段各获一次 &middot; once for undergraduate study, once for master&rsquo;s study</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <p class="label">Contact</p>
+    <h2 style="margin-top:12px">Let&rsquo;s work<br>together<span>.</span></h2>
+    <div class="row">
+      <span class="mail" id="mail">wuhao.u4@gmail.com</span>
+      <button class="cbtn" id="copyMail" type="button">Copy email</button>
+    </div>
+    <div class="foot"><span>&copy; 2026 吴昊 / Wu Hao</span><a href="#top">Back to top</a></div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <img id="lbImg" alt="">
+  <button type="button" id="lbClose">Close</button>
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'), im=document.getElementById('lbImg'), closeBtn=document.getElementById('lbClose'), last=null;
+  function open(btn){
+    var src=btn.querySelector('img'); if(!src) return;
+    im.src=src.currentSrc||src.src; im.alt=src.alt; lb.hidden=false; last=btn; closeBtn.focus();
+  }
+  function close(){ lb.hidden=true; im.removeAttribute('src'); if(last) last.focus(); }
+  document.querySelectorAll('[data-lb]').forEach(function(b){ b.addEventListener('click',function(){open(b)}); });
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!lb.hidden) close(); });
+
+  var cb=document.getElementById('copyMail');
+  cb.addEventListener('click',function(){
+    var t=document.getElementById('mail');
+    function fallback(){ var r=document.createRange(); r.selectNodeContents(t); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try{
+      navigator.clipboard.writeText(t.textContent.trim()).then(function(){ cb.textContent='Copied'; setTimeout(function(){cb.textContent='Copy email'},1600); },fallback);
+    }catch(e){ fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
